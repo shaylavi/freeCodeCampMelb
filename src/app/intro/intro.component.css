@@ -1,0 +1,35 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@font-face {
+  font-family: 'saxmono';
+  src: url('/assets/fonts/saxmono.ttf') format('opentype');
+}
+
+.content{
+    border: 3px solid black;
+    height: 100%;
+}
+.header {
+  background-color: #006400;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 42pt;
+  color: white;
+}
+
+#title {
+  height: 100px;
+  margin-top: -40px;
+}
+#sponsor {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  max-height: 210px;
+}
+#registration {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  max-height: 210px;
+}
