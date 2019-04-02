@@ -1,0 +1,51 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@font-face {
+  font-family: 'saxmono';
+  src: url('/assets/fonts/saxmono.ttf') format('opentype');
+}
+
+
+.header {
+  background-color: #006400;
+  vertical-align: middle;
+  text-align:center;
+  font-size: 42pt;
+  color: white;
+}
+
+#title {
+  height: 100px;
+  margin-top: -40px;
+}
+#sponsor {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  max-height: 210px;
+}
+#registration{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  max-height: 210px;
+}
+.footer{
+  /* vertical-align: middle;
+  text-align:right;
+  margin-top: 40px;
+  margin-right: 100px; */
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
+  font-size: 42pt;
+}
+.no-data{
+  vertical-align: middle;
+  text-align:center;
+  font-size: 46pt;
+display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}

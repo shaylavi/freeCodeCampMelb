@@ -2,15 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ActivitytableComponent } from './activitytable/activitytable.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/material';
+import { DataService } from './data-service.service';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActivitytableComponent,
+    IntroComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
