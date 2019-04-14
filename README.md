@@ -3,10 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Todo items:
-# Registration form (minimal at first, prepare more fields)
-# Make a Database (DynamoDB) + CRUD
-# Finalize images (sponsor, QRScan)
-# Deploy
+
+1 Registration form (minimal at first, prepare more fields)
+2 Make a Database (DynamoDB) + CRUD
+3 Finalize images (sponsor, QRScan)
+4 Deploy
 
 # Make Prezi slides for first times
 # Workout the animations as dynamic?

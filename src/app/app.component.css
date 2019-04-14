@@ -5,11 +5,10 @@
   src: url('/assets/fonts/saxmono.ttf') format('opentype');
 }
 
-
 .header {
   background-color: #006400;
   vertical-align: middle;
-  text-align:center;
+  text-align: center;
   font-size: 42pt;
   color: white;
 }
@@ -21,31 +20,43 @@
 #sponsor {
   position: absolute;
   left: 15px;
-  top: 15px;
-  max-height: 210px;
+  top: 35px;
+  /* max-height: 210px; */
 }
-#registration{
+#registration {
   position: absolute;
   right: 15px;
   top: 15px;
   max-height: 210px;
 }
-.footer{
+.codingTitle {
   /* vertical-align: middle;
   text-align:right;
   margin-top: 40px;
   margin-right: 100px; */
   position: absolute;
-  bottom: 50px;
+  top: 700px;
   right: 40px;
   font-size: 42pt;
+  text-shadow: 2px 2px lightgreen;
 }
-.no-data{
+.no-data {
   vertical-align: middle;
-  text-align:center;
+  text-align: center;
   font-size: 46pt;
-display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 500px;
+  text-shadow: 2px 2px lightgreen;
+}
+.nav-buttons-left{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.nav-buttons-right{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
