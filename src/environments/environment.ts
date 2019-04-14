@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBSh3b6lFoLRxUA57zUxhKSXPc8pmOtMgA',
+    authDomain: 'freecodecampmelb.firebaseapp.com',
+    databaseURL: 'https://freecodecampmelb.firebaseio.com',
+    projectId: 'freecodecampmelb',
+    storageBucket: 'freecodecampmelb.appspot.com',
+    messagingSenderId: '910104473126'
+  }
 };
 
 /*

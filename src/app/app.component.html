@@ -3,19 +3,59 @@
   rel="stylesheet"
 />
 <div class="content">
-<div id="sponsor"><img src="assets/sponsor.png" /></div>
-<div id="registration"><img src="assets/qrcode.png" /></div>
-<div class="header">
-  <img alt="freeCodeCamp" src="assets/freecodecamp.jpeg" />
-  <div id="title">
-    Melbourne
+  <div class="header">
+    <div id="sponsor">
+      <img src="assets/YBFVLogo1.png" style="max-height: 150px;" />
+    </div>
+    <div id="registration">
+      <img
+        src="assets/qrscan.png"
+        (click)="changeSize()"
+        [@qrCode]="currentSize"
+      />
+    </div>
+    <div>
+      <img alt="freeCodeCamp" src="assets/freecodecamp.jpeg" />
+      <div id="title">
+        Melbourne
+      </div>
+    </div>
   </div>
-</div>
-<div class="content" *ngIf="myDataArray.length">
-  <app-activitytable> </app-activitytable>
-  <div class="footer">happy coding!</div>
-</div>
-<div class="content" *ngIf="!myDataArray.length">
-  <div class="no-data">happy coding!</div>
-</div>
+  <div class="content">
+    <div class="css-carousel">
+      <!-- carousel controls -->
+      <input type="radio" name="carousel" id="carousel-1" checked />
+      <input type="radio" name="carousel" id="carousel-2" />
+      <!-- <input type="radio" name="carousel" id="carousel-3" />
+      <input type="radio" name="carousel" id="carousel-4" /> -->
+
+      <!-- carousel navigation -->
+      <div class="carousel-nav">
+        <label for="carousel-1"></label>
+        <label for="carousel-2"></label>
+        <!-- <label for="carousel-3"></label>
+        <label for="carousel-4"></label> -->
+      </div>
+
+      <!-- carousel slides -->
+      <div class="carousel-slides">
+        <div class="carousel-inner">
+
+          <div class="carousel-item">
+            <app-intro></app-intro>
+          </div>
+          <div class="carousel-item">
+              <app-users-list></app-users-list>
+            </div>
+          <!-- <div class="carousel-item">
+              <app-intro></app-intro>
+            </div>
+          <div class="carousel-item">
+              <app-intro></app-intro>
+            </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

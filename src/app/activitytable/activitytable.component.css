@@ -13,3 +13,12 @@
     overflow: auto;
     width: 55%
 }
+
+.mat-cell {
+    font-size: 16px;
+}
+
+.mat-header-cell {
+    font-size: 18px;
+    font-weight: bold;
+}
