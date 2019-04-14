@@ -1,13 +1,12 @@
-body {
-  margin: 0;
-  font-family: Roboto, Arial, Sans-Serif;
-}
-
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 @font-face {
   font-family: 'saxmono';
   src: url('/assets/fonts/saxmono.ttf') format('opentype');
+}
+body {
+  margin: 0;
+  font-family: Roboto, Arial, Sans-Serif;
 }
 
 .header {
