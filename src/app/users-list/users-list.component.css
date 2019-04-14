@@ -61,3 +61,12 @@
   bottom: 15px;
   right: 15px;
 }
+
+.reg-link {
+  position: absolute;
+right:0;
+left:0;
+bottom: 20px;
+margin: 0 0 0 0;
+text-align: center;
+}
