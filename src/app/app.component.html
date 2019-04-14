@@ -3,33 +3,59 @@
   rel="stylesheet"
 />
 <div class="content">
-  <div class="slide-container" [@nextSlide]="currentState">
+  <div class="header">
     <div id="sponsor">
       <img src="assets/YBFVLogo1.png" style="max-height: 150px;" />
     </div>
-      <div id="registration"><img src="assets/qrscan.png" (click)="changeSize()" [@qrCode]="currentSize" /></div>
-    <div class="header">
+    <div id="registration">
+      <img
+        src="assets/qrscan.png"
+        (click)="changeSize()"
+        [@qrCode]="currentSize"
+      />
+    </div>
+    <div>
       <img alt="freeCodeCamp" src="assets/freecodecamp.jpeg" />
       <div id="title">
         Melbourne
       </div>
     </div>
-    <div class="content" [hidden]="totalUsers === 0">
-        <app-activitytable (totalUsers)="onTotalUsers($event)"> </app-activitytable>
-      <div class="codingTitle">happy coding!</div>
-    </div>
-    <div class="content" [hidden]="totalUsers > 0">
-      <div class="no-data">happy coding!</div>
-    </div>
-
-    <!-- <app-intro></app-intro> -->
   </div>
-  <!-- <div class="nav-buttons">
-    <div class="nav-buttons-left">
-      <button (click)="changeState()"><-</button>
+  <div class="content">
+    <div class="css-carousel">
+      <!-- carousel controls -->
+      <input type="radio" name="carousel" id="carousel-1" checked />
+      <input type="radio" name="carousel" id="carousel-2" />
+      <!-- <input type="radio" name="carousel" id="carousel-3" />
+      <input type="radio" name="carousel" id="carousel-4" /> -->
+
+      <!-- carousel navigation -->
+      <div class="carousel-nav">
+        <label for="carousel-1"></label>
+        <label for="carousel-2"></label>
+        <!-- <label for="carousel-3"></label>
+        <label for="carousel-4"></label> -->
+      </div>
+
+      <!-- carousel slides -->
+      <div class="carousel-slides">
+        <div class="carousel-inner">
+
+          <div class="carousel-item">
+            <app-intro></app-intro>
+          </div>
+          <div class="carousel-item">
+              <app-users-list></app-users-list>
+            </div>
+          <!-- <div class="carousel-item">
+              <app-intro></app-intro>
+            </div>
+          <div class="carousel-item">
+              <app-intro></app-intro>
+            </div> -->
+
+        </div>
+      </div>
     </div>
-    <div class="nav-buttons-right">
-      <button (click)="changeState()">-></button>
-    </div>
-  </div> -->
+  </div>
 </div>

@@ -12,12 +12,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/material';
 import { DataService } from './data-service.service';
 import { IntroComponent } from './intro/intro.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivitytableComponent,
-    IntroComponent
+    IntroComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<div class="content">
+    <div class="content" [hidden]="totalUsers === 0">
+        <app-activitytable (totalUsers)="onTotalUsers($event)"> </app-activitytable>
+      <div class="codingTitle">happy coding!</div>
+    </div>
+    <div class="content" [hidden]="totalUsers > 0">
+      <div class="no-data">happy coding!</div>
+    </div>
+  </div>
