@@ -4,7 +4,7 @@
 />
 <div class="content">
   <div class="header">
-    <div id="sponsor">
+    <div id="sponsor" [ngClass]="{'button-glow':(selectedRadio === 'carousel-3')}">
       <img src="assets/YBFVLogo1.png" style="max-height: 150px;" />
     </div>
     <div id="registration">
@@ -24,36 +24,44 @@
   <div class="content">
     <div class="css-carousel">
       <!-- carousel controls -->
-      <input type="radio" name="carousel" id="carousel-1" checked />
-      <input type="radio" name="carousel" id="carousel-2" />
-      <!-- <input type="radio" name="carousel" git statuid="carousel-3" />
-      <input type="radio" name="carousel" id="carousel-4" /> -->
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-1" checked />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-2" />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-3" />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-4" />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-5" />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-6" />
 
       <!-- carousel navigation -->
       <div class="carousel-nav">
         <label for="carousel-1"></label>
         <label for="carousel-2"></label>
-        <!-- <label for="carousel-3"></label>
-        <label for="carousel-4"></label> -->
+        <label for="carousel-3"></label>
+        <label for="carousel-4"></label>
+        <label for="carousel-5"></label>
+        <label for="carousel-6"></label>
       </div>
 
       <!-- carousel slides -->
       <div class="carousel-slides">
         <div class="carousel-inner">
-
           <div class="carousel-item">
             <app-intro></app-intro>
           </div>
           <div class="carousel-item">
-              <app-users-list></app-users-list>
-            </div>
-          <!-- <div class="carousel-item">
-              <app-intro></app-intro>
-            </div>
+            <app-about-us></app-about-us>
+          </div>
           <div class="carousel-item">
-              <app-intro></app-intro>
-            </div> -->
-
+            <app-sponsor-page></app-sponsor-page>
+          </div>
+          <div class="carousel-item">
+            <app-benefits></app-benefits>
+          </div>
+          <div class="carousel-item">
+            <app-what-to-do></app-what-to-do>
+          </div>
+          <div class="carousel-item">
+            <app-users-list></app-users-list>
+          </div>
         </div>
       </div>
     </div>

@@ -13,13 +13,24 @@ import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/mater
 import { DataService } from './data-service.service';
 import { IntroComponent } from './intro/intro.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { SponsorPageComponent } from './sponsor-page/sponsor-page.component';
+import { BenefitsComponent } from './benefits/benefits.component';
+import { FuturePlansComponent } from './future-plans/future-plans.component';
+import { WhatToDoComponent } from './what-to-do/what-to-do.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivitytableComponent,
     IntroComponent,
-    UsersListComponent
+    UsersListComponent,
+    AboutUsComponent,
+    SponsorPageComponent,
+    BenefitsComponent,
+    FuturePlansComponent,
+    WhatToDoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +39,7 @@ import { UsersListComponent } from './users-list/users-list.component';
     MatButtonModule,
     MatCheckboxModule,
     AngularFireDatabaseModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'freecodecampmelb')
   ],
   providers: [DataService],

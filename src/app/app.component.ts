@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  keyframes
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -8,29 +15,36 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
   styleUrls: ['./app.component.css', './css-carousel.css'],
   animations: [
     trigger('qrCode', [
-      state('initial', style({
-        width: '210px',
-        height: '210px'
-      })),
-      state('final', style({
-        width: '440px',
-        height: '440px'
-      })),
-      transition('initial=>final', animate('500ms 0.2ms ease-in-out'
-      )),
+      state(
+        'initial',
+        style({
+          width: '210px',
+          height: '210px'
+        })
+      ),
+      state(
+        'final',
+        style({
+          width: '440px',
+          height: '440px'
+        })
+      ),
+      transition('initial=>final', animate('500ms 0.2ms ease-in-out')),
       transition('final=>initial', animate('500ms 0.2ms ease-in-out'))
     ])
   ]
-  })
-
+})
 export class AppComponent {
   totalUsers = 0;
   currentSize = 'initial';
-
+  selectedRadio = null;
   onTotalUsers(users: number) {
     this.totalUsers = users;
   }
   changeSize() {
     this.currentSize = this.currentSize === 'initial' ? 'final' : 'initial';
+  }
+  onChange(val) {
+    this.selectedRadio = val.srcElement.id;
   }
 }
