@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -37,7 +37,40 @@ import {
 export class AppComponent {
   totalUsers = 0;
   currentSize = 'initial';
-  selectedRadio = null;
+  selectedRadio = 'carousel-1';
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    let radioButton;
+    if (event.key === 'ArrowRight') {
+      const currentLoc = parseInt(
+        this.selectedRadio[this.selectedRadio.length - 1],
+        10
+      );
+      if (currentLoc >= 1 && currentLoc < 6) {
+        const newSelection =
+          this.selectedRadio.substring(0, this.selectedRadio.length - 1) +
+          (currentLoc + 1);
+        radioButton = document.getElementById(newSelection) as HTMLInputElement;
+        radioButton.checked = true;
+        this.selectedRadio = newSelection;
+      }
+    } else if (event.key === 'ArrowLeft') {
+      const currentLoc = parseInt(
+        this.selectedRadio[this.selectedRadio.length - 1],
+        10
+      );
+      if (currentLoc > 1 && currentLoc <= 6) {
+        const newSelection =
+          this.selectedRadio.substring(0, this.selectedRadio.length - 1) +
+          (currentLoc - 1);
+        radioButton = document.getElementById(newSelection) as HTMLInputElement;
+        radioButton.checked = true;
+        this.selectedRadio = newSelection;
+      }
+    } else if (event.key === 'ArrowUp') {
+      document.getElementById('qrCode').click();
+    }
+  }
   onTotalUsers(users: number) {
     this.totalUsers = users;
   }
