@@ -25,8 +25,8 @@ import {
       state(
         'final',
         style({
-          width: '440px',
-          height: '440px'
+          width: '660px',
+          height: '660px'
         })
       ),
       transition('initial=>final', animate('500ms 0.2ms ease-in-out')),
@@ -75,7 +75,13 @@ export class AppComponent {
     this.totalUsers = users;
   }
   changeSize() {
-    this.currentSize = this.currentSize === 'initial' ? 'final' : 'initial';
+    if (this.currentSize === 'initial') {
+      this.currentSize = 'final';
+      document.getElementById('reg-link').className = 'reg-link inflate-text text-glow';
+    } else {
+      this.currentSize = 'initial';
+      document.getElementById('reg-link').className = 'reg-link';
+    }
   }
   onChange(val) {
     this.selectedRadio = val.srcElement.id;

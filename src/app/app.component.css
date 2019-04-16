@@ -19,27 +19,55 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   z-index: 5;
- }
-
- @keyframes glowing {
-  0% { box-shadow: 0 0 -10px #c4a300; }
-  40% { box-shadow: 0 0 20px #c4a300; }
-  60% { box-shadow: 0 0 20px #c4a300; }
-  100% { box-shadow: 0 0 -10px #c4a300; }
-}
-
-.button-glow {
-  animation: glowing 1000ms infinite;
 }
 
 #sponsor {
   position: absolute;
   left: 15px;
   top: 35px;
-  /* max-height: 210px; */
+  /* -webkit-filter: drop-shadow(0 0 1px white);
+  filter: drop-shadow(0 0 1px white); */
+/* max-height: 210px; */
 }
+@keyframes glowingBox {
+  0% {
+    -webkit-filter: drop-shadow(0 0 8px white);
+  }
+  40% {
+    -webkit-filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 1px white);
+  }
+  60% {
+    -webkit-filter: drop-shadow(0 0 1px white);
+    filter: drop-shadow(0 0 1px white);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 8px white);
+  }
+}
+@keyframes glowingText {
+  0% {
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;;
+  }
+  40% {
+    text-shadow: 1px 3px 6px #666;
+  }
+  60% {
+    text-shadow: 1px 3px 6px #666;
+  }
+  100% {
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;;
+  }
+}
+.text-glow {
+  animation: glowingText 1000ms infinite;
+}
+.button-glow {
+  animation: glowingBox 1000ms infinite;
+}
+
 #registration {
   position: absolute;
   right: 15px;
@@ -71,6 +99,21 @@ body {
   justify-content: center;
   height: 500px;
   text-shadow: 2px 2px lightgreen;
+}
+.reg-link {
+  position: relative;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  margin: -10px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  transition: font-size 0.7s, letter-spacing 0.8s;
+}
+.inflate-text{
+  letter-spacing: 8px;
+  font-size: 40px;
+  color: red;
 }
 /* .header {
   background-color: #fff;
@@ -147,9 +190,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   position: relative;
 }
 
