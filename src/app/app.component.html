@@ -14,7 +14,10 @@
         (click)="changeSize()"
         [@qrCode]="currentSize"
       />
+      <div class="link-text" id="link-text"><b>Register at:</b></div>
       <div class="reg-link" id="reg-link">http://tiny.cc/<b>fccmelb-reg</b></div>
+      <div class="link-text" id="follow-text"><b>Follow at:</b></div>
+      <div class="reg-link" style="color:#006400 !important; z-index:-1" id="follow-link">http://tiny.cc/<b>fccmelb</b></div>
     </div>
     <div>
       <img alt="freeCodeCamp" src="assets/freecodecamp.jpeg" />
@@ -26,7 +29,7 @@
   <div class="content">
     <div class="css-carousel">
       <!-- carousel controls -->
-      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-1" checked />
+      <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-1" />
       <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-2" />
       <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-3" />
       <input type="radio" name="carousel" (change)="onChange($event)" id="carousel-4" />

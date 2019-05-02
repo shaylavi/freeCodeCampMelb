@@ -100,7 +100,22 @@ body {
   height: 500px;
   text-shadow: 2px 2px lightgreen;
 }
+.separate-lines{
+  margin-top: 15px !important;
+}
+.link-text {
+  color: #006400;
+  line-height: 0;
+  font-size: 1px;
+  z-index:1;
+}
+.link-text-large {
+  color: black !important;
+  font-size: 38px;  
+  transition: font-size 0.7s, letter-spacing 0.8s;
+}
 .reg-link {
+  z-index:1;
   position: relative;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -114,6 +129,12 @@ body {
   letter-spacing: 8px;
   font-size: 40px;
   color: red;
+}
+.inflate-text2{
+  letter-spacing: 8px;
+  font-size: 38px;
+  color: red;
+  -webkit-filter: drop-shadow(0 0 1px black);
 }
 /* .header {
   background-color: #fff;
