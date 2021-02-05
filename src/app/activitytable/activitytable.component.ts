@@ -13,7 +13,7 @@ let DATA: PeriodicElement[] = [];
   selector: 'app-activitytable',
   templateUrl: './activitytable.component.html',
   styleUrls: ['./activitytable.component.css']
-})
+}) 
 export class ActivitytableComponent {
   @Output('totalUsers') totalUsers = new EventEmitter<number>();
   columnsToDisplay: string[] = ['name', 'activity', 'desires'];
