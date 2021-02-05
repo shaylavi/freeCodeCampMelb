@@ -1,14 +1,16 @@
-<link
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 <div class="content">
-    <div class="content" [hidden]="totalUsers === 0">
-        <app-activitytable (totalUsers)="onTotalUsers($event)"> </app-activitytable>
-      <div class="codingTitle">happy coding!</div>
-    </div>
-    <div class="content" [hidden]="totalUsers > 0">
-      <div class="no-data">happy coding!</div>
-    </div>
-    <div class="reg-link" id="bottom-links"><b>Register @ </b> <h href="http://tiny.cc/fccmelb-reg" style="color:blue">http://tiny.cc/fccmelb-reg</h href="http://tiny.cc/fccmelb-reg"> | <b>Follow @ </b> <a href="http://tiny.cc/fccmelb" style="color:blue">http://tiny.cc/fccmelb</a href="http://tiny.cc/fccmelb"> </div>
+  <div class="content" [hidden]="totalUsers === 0">
+    <!-- <app-activitytable (totalUsers)="onTotalUsers($event)"> </app-activitytable> -->
+    <div class="codingTitle">happy coding!</div>
   </div>
+  <div class="content" [hidden]="totalUsers > 0">
+    <div class="no-data">happy coding!</div>
+  </div>
+  <div class="reg-link" id="bottom-links"><b>Register @ </b>
+    <a href="http://tiny.cc/fccmelb-reg" style="color:#0000ff">http://tiny.cc/fccmelb-reg
+    </a> |
+    <b>Follow @ </b>
+    <a href="http://tiny.cc/fccmelb" style="color:blue">http://tiny.cc/fccmelb</a>
+  </div>
+</div>

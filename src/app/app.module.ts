@@ -38,9 +38,9 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatButtonModule,
     MatCheckboxModule,
-    AngularFireDatabaseModule,
-    FormsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'freecodecampmelb')
+    // AngularFireDatabaseModule,
+    FormsModule
+    // AngularFireModule.initializeApp(environment.firebase, 'freecodecampmelb')
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
