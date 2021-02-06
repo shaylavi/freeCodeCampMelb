@@ -23,13 +23,13 @@ export class ActivitytableComponent {
     1}/${this.date.getFullYear()}`;
 
   constructor(dataService: DataService) {
-    dataService.users.subscribe(res => {
-      DATA = [];
-      this.totalUsers.emit(res.length);
-      res.forEach(user => {
-        DATA.push(user);
-      });
-      this.myDataArray.data = DATA;
-    });
+    // dataService.users.subscribe(res => {
+    //   DATA = [];
+    //   this.totalUsers.emit(res.length);
+    //   res.forEach(user => {
+    //     DATA.push(user);
+    //   });
+    //   this.myDataArray.data = DATA;
+    // });
   }
 }

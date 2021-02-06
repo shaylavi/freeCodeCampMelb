@@ -18,12 +18,12 @@ export class DataService {
   usersRef: AngularFireList<any>;
   users: Observable<any[]>;
   constructor(dbUsers: AngularFireDatabase) {
-    this.usersRef = dbUsers.list('users');
-    this.users = this.usersRef.valueChanges();
-    this.users.subscribe(res => {
-      res.forEach(user => {
-        DATA.push(user);
-      });
-    });
+    // this.usersRef = dbUsers.list('users');
+    // this.users = this.usersRef.valueChanges();
+    // this.users.subscribe(res => {
+    //   res.forEach(user => {
+    //     DATA.push(user);
+    //   });
+    // });
   }
 }

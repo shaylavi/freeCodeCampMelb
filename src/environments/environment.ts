@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyBSh3b6lFoLRxUA57zUxhKSXPc8pmOtMgA',
-    authDomain: 'freecodecampmelb.firebaseapp.com',
-    databaseURL: 'https://freecodecampmelb.firebaseio.com',
-    projectId: 'freecodecampmelb',
-    storageBucket: 'freecodecampmelb.appspot.com',
-    messagingSenderId: '910104473126'
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: ''
   }
 };
 
