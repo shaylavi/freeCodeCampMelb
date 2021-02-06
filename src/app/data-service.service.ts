@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+// import { Injectable } from '@angular/core';
+// import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
 class User {
@@ -11,13 +11,15 @@ class User {
 }
 const DATA = [];
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class DataService {
-  usersRef: AngularFireList<any>;
+  usersRef: any;
+  // usersRef: AngularFireList<any>;
   users: Observable<any[]>;
-  constructor(dbUsers: AngularFireDatabase) {
+  constructor(dbUsers: any) {
+  // constructor(dbUsers: AngularFireDatabase) {
     // this.usersRef = dbUsers.list('users');
     // this.users = this.usersRef.valueChanges();
     // this.users.subscribe(res => {
